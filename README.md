@@ -1,9 +1,12 @@
 Struts2 和 Spring 整合的俩种方式
+
 1.Action的类由Struts2自身去创建
   也就是在Struts.xml去配置Action
+  
 2.Action的类由Spring框架去创建
  在Spring注入Action类 让Spring去管理 注意：scope="prototype" 默认的为单例
  然后在Struts.xml中直接调用 id 就可以了
+ 
 Hibernate和Spring 整合
 
 问题
@@ -14,6 +17,7 @@ Hibernate整合Spring
 错误：java.lang.ClassCastException: org.springframework.orm.hibernate4.SessionHolder cannot be cast to org.springframework.orm.hibernate3.SessionHolder
 hibernate4 没提供 HebernateDaoSupport 支持
 直接掉 sessionFactory来处理
+
 public class ProductDao{
 
 	private SessionFactory sessionFactory;
